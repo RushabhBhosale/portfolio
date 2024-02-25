@@ -9,7 +9,7 @@ import Badge from "./Badge";
 
 const Hero = () => {
    return (
-      <div className="py-12 my-4 md:my-0 xl:py-24 h-[84vh] overflow-hidden xl:pt-11 bg-hero bg-no-repeat dark:bg-none bg-cover">
+      <div className="py-12 mb-4 md:my-0 xl:py-24 h-[84vh] overflow-hidden xl:pt-11 bg-hero bg-no-repeat dark:bg-none bg-cover">
          <div className="container mx-auto">
             <div className="flex justify-between gap-x-8">
                <div className=" flex max-w-[720px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
