@@ -1,7 +1,6 @@
 import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Briefcase } from "lucide-react"
 import { FaRegCalendar } from "react-icons/fa6";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import Image from "next/image"
 
 const info = [
    {

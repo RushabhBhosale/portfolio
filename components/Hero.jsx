@@ -2,7 +2,6 @@ import Link from "next/link"
 import { Send, Download } from "lucide-react"
 import { RiArrowDownSLine } from "react-icons/ri";
 import { Button } from "./ui/button";
-import { FaUserCheck } from "react-icons/fa6";
 import { MdMobileFriendly } from "react-icons/md";
 import Socials from "./Socials";
 import DevImg from "./DevImg";

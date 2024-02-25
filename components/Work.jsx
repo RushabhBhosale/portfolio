@@ -20,7 +20,7 @@ const projectData = [
       image: '/work/4.png',
       category: "next js",
       name: "Nexa Website",
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea nisi at numquam blanditiis dolorum quas.",
+      description: "Lorem ipsum dolor amet consectetur adipisicing elit. Ea nisi at numquam blanditiis dolorum quas.",
       link: "/",
       github: "/",
    },
