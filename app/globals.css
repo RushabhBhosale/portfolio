@@ -109,3 +109,19 @@
       visibility: hidden;
    }
 }
+
+.bg-movie {
+   background-image: url('/projects/1.png');
+}
+.bg-react-ecom {
+   background-image: url('/projects/2.png');
+}
+.bg-sneaker {
+   background-image: url('/projects/3.png');
+}
+.bg-next-ecom {
+   background-image: url('/projects/4.png');
+}
+.bg-next-blog {
+   background-image: url('/projects/5.png');
+}
