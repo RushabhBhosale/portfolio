@@ -22,7 +22,9 @@ const Hero = () => {
                      <Link href='/'>
                         <Button className="gap-x-2">Contact Me <Send size={18} /></Button>
                      </Link>
-                     <Button variant='secondary' className="gap-x-2">Download CV <Download size={18} /></Button>
+                     <Link href='/projects'>
+                        <Button variant='secondary' className="gap-x-2">Projects<Download size={18} /></Button>
+                     </Link>
                   </div>
 
                   <Socials
@@ -32,10 +34,10 @@ const Hero = () => {
 
                </div>
                <div className="hidden xl:flex relative -mt-12">
-                  <Badge 
-                  icon={<MdMobileFriendly />}
-                  badgeText='Responsive Designs' 
-                  containerStyle='w-[250px] absolute top-[300px] bg-white dark:bg-accent'
+                  <Badge
+                     icon={<MdMobileFriendly />}
+                     badgeText='Responsive Designs'
+                     containerStyle='w-[250px] absolute top-[300px] bg-white dark:bg-accent'
                   />
                   <div className="bg-hero_shape_light dark:bg-hero_shape_dark scale-75 w-[500px] h-[500px] absolute -top-1 -right-2 bg-no-repeat"></div>
                   <DevImg
