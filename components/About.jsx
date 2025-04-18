@@ -15,7 +15,7 @@ const About = () => {
             <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About Me</h2>
          </div>
          <div className="flex justify-center mx-auto xl:w-[700px] md:w-[500px]">
-            <Tabs defaultValue="personal" className="w-full">
+            <Tabs defaultValue="personal" className="w-full px-4">
                <TabsList className="w-full grid-cols-3 p-1 justify-between border-2">
                   <TabsTrigger className='w-[162px]' value='personal'>Personal Info</TabsTrigger>
                   <TabsTrigger className='w-[162px]' value='qualifications'>Qualifications</TabsTrigger>
