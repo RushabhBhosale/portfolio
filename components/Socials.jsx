@@ -3,10 +3,10 @@ import { RiFacebookFill, RiGithubFill, RiInstagramFill, RiLinkedinFill } from "r
 import Link from 'next/link'
 
 const icons = [
-  { path: "/", name: <RiLinkedinFill /> },
-  { path: "/", name: <RiGithubFill /> },
-  { path: "/", name: <RiInstagramFill /> },
-  { path: "/", name: <RiFacebookFill /> },
+  { path: "https://www.linkedin.com/in/rushabh-bhosale-frontend-developer/?originalSubdomain=in", name: <RiLinkedinFill /> },
+  { path: "https://github.com/RushabhBhosale", name: <RiGithubFill /> },
+  { path: "https://www.instagram.com/r_ushabh_/", name: <RiInstagramFill /> },
+  { path: "https://www.facebook.com/rushabh.bhosale.56", name: <RiFacebookFill /> },
 ]
 
 const Socials = ({ containerStyles, iconStyles }) => {

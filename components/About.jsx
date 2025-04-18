@@ -1,103 +1,7 @@
 import { User2, MailIcon, HomeIcon, PhoneCall, GraduationCap, Briefcase } from "lucide-react"
 import { FaRegCalendar } from "react-icons/fa6";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-
-const info = [
-   {
-      icon: <User2 size={20} />,
-      text: "Rushabh Bhosale"
-   },
-   {
-      icon: <PhoneCall size={20} />,
-      text: "+91 9137996317"
-   },
-   {
-      icon: <MailIcon size={20} />,
-      text: "bhosalerushabh0@gmail.com"
-   },
-   {
-      icon: <FaRegCalendar size={20} />,
-      text: "Born on 23 March, 2003"
-   },
-   {
-      icon: <GraduationCap size={20} />,
-      text: "Bacherlor's in Mass Media"
-   },
-   {
-      icon: <HomeIcon size={20} />,
-      text: "Nerul, Navi Mumbai"
-   },
-]
-
-const qualifications = [
-   {
-      title: 'education',
-      data: [
-         {
-            college: "G N Khalsa",
-            qualification: "Bachelor's in Mass Media",
-            year: "2020 - 2023"
-         },
-         {
-            college: "Awdiz",
-            qualification: "Frontend Developement Course",
-            year: 2023
-         },
-      ]
-   },
-   {
-      title: "experience",
-      data: [
-         {
-            company: "Finpus",
-            role: "Digital Marketing Intern",
-            year: '2022(Apr - July)',
-         },
-         {
-            company: "Eduvert",
-            role: "Digital Marketing Executive",
-            year: '2023(Apr - Aug)',
-         }
-      ]
-   }
-]
-
-const skills = [
-   {
-      title: "skills",
-      data: [
-         {
-            name: "HTML, CSS"
-         },
-         {
-            name: "React Js, Redux & Next Js"
-         },
-         {
-            name: "JavaScript & TypeScript"
-         },
-         {
-            name: "MongoDb, Express Js"
-         },
-         {
-            name: "Next Auth, GraphQl, RestApi"
-         },
-      ]
-   },
-   {
-      title: "tools",
-      data: [
-         {
-            name: "Github, "
-         },
-         {
-            name: "Vscode, "
-         },
-         {
-            name: "Wordpress & Shopify "
-         },
-      ]
-   },
-]
+import { coreSkills, info, qualifications, skills } from "@/utils/constants";
 
 const About = () => {
 
@@ -134,7 +38,7 @@ const About = () => {
                         <div className="flex flex-col gap-y-2">
                            <div className="text-primary">Languages</div>
                            <div className="border-b border-border"></div>
-                           <div>Marathi, Hindi English, Japanese N5</div>
+                           <div>Marathi, Hindi, English, Japanese N5</div>
                         </div>
                      </div>
                   </TabsContent>
@@ -195,35 +99,30 @@ const About = () => {
                         </div>
                      </div>
                   </TabsContent>
-                  <TabsContent value='skills'>
+                  <TabsContent value="skills">
                      <div className="text-center">
-                        <h3 className="h3 mb-8">
-                           Tools & Skills I use Everyday
-                        </h3>
-                        <div className="mb-10">
-                           <h4 className="text-xl font-semibold mb-2 text-primary">Skills</h4>
-                           <div className="border-b border-border mb-4"></div>
-                           <div>
-                              {getData(skills, "skills").data.map((item, index) => (
-                                 <div key={index}>
-                                    <div className="font-medium my-2">{item.name}</div>
+                        <h3 className="h3 mb-8 xl:mb-12">Core Skills</h3>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                           {coreSkills.map((skill, index) => (
+                              <div key={index} className="p-3 rounded-lg border border-border bg-muted/20 shadow-sm">
+                                 <div className="flex justify-between items-center mb-1">
+                                    <span className="text-sm font-medium text-muted-foreground">{skill.name}</span>
+                                    <span className="text-xs text-primary font-semibold">{skill.level}%</span>
                                  </div>
-                              ))}
-                           </div>
-                        </div>
-                        <div className="mb-16">
-                           <h4 className="text-xl font-semibold mb-2 text-primary">Tools</h4>
-                           <div className="border-b border-border mb-4"></div>
-                           <div className="flex justify-center">
-                              {getData(skills, "tools").data.map((item, index) => (
-                                 <div key={index}>
-                                    <div className="font-medium">{item.name}</div>
+                                 <div className="w-full bg-border h-2 rounded-full">
+                                    <div
+                                       className="h-2 rounded-full bg-primary"
+                                       style={{ width: `${skill.level}%` }}
+                                    />
                                  </div>
-                              ))}
-                           </div>
+                              </div>
+                           ))}
                         </div>
                      </div>
+
                   </TabsContent>
+
+
                </div>
             </Tabs>
          </div>

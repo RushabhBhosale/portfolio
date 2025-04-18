@@ -13,10 +13,10 @@ const Hero = () => {
          <div className="container mx-auto">
             <div className="flex justify-between gap-x-8">
                <div className=" flex max-w-[720px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-                  <div className="text-sm tracking-[4px] uppercase text-primary font-semibold mb-4">Front End Developer</div>
+                  <div className="text-sm tracking-[4px] uppercase text-primary font-semibold mb-4">Software Developer</div>
                   <h1 className="h1 mb-4">Hi, I'm Rushabh Bhosale let's connect!</h1>
                   <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-                     Experienced frontend developer proficient with Next.js, React, Redux, and popular CSS frameworks like Bootstrap, and Tailwind CSS.
+                     Experienced Software developer proficient with Next.js, React, Redux, and popular CSS frameworks like Bootstrap, and Tailwind CSS and also mobile app in React Native, Java or Ionic
                   </p>
                   <div className="flex flex-col gap-y-3 gap-x-3 md:flex-row mx-auto xl:mx-0 mb-12">
                      <Link href='/'>

@@ -2,50 +2,10 @@
 
 import ProjectCard from "@/components/ProjectCard"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { projects } from "@/utils/constants"
 import { useState } from "react"
 
-const projectData = [
-  {
-     image: 'bg-movie',
-     category: "next js",
-     name: "Movie DB",
-     description: "Next.js movie website, integrating TMDB API for a vast collection. Tailwind CSS brings modern styling, creating a user-friendly platform where movie lovers can explore, discover, and share their favorites..",
-     link: "/",
-     github: "/",
-  },
-  {
-     image: 'bg-react-ecom',
-     category: "react js",
-     name: "The Sofa Store",
-     description: "React.js Firebase Sofa Store, where modern design meets comfort. With responsive design powered by Tailwind CSS, explore our curated collection, personalize your space, and elevate your home decor with ease.",
-     link: "/",
-     github: "/",
-  },
-  {
-     image: 'bg-sneaker',
-     category: "javascript",
-     name: "Fashion City",
-     description: "Our sleek and responsive design, tailored with Tailwind CSS, offers a seamless shopping experience for fashion enthusiasts. Discover the latest trends, find your signature look, ",
-     link: "/",
-     github: "/",
-  },
-  {
-     image: 'bg-next-ecom',
-     category: "next js",
-     name: "Bloggy",
-     description: "Next.js blog website. Powered by Tailwind CSS, our platform provides an intuitive, responsive interface for readers to explore and engage with insightful content. Experience seamless navigation, discover captivating posts, and join a vibrant community of bloggers, all in one place",
-     link: "/",
-     github: "/",
-  },
-  {
-     image: 'bg-next-blog',
-     category: "next js",
-     name: "Statinary Store",
-     description: "Next.js Stationary website. Powered by Tailwind CSS, our platform provides a seamless shopping experience, with a vast collection of stationery items for every need. Find the perfect tools to inspire your productivity, whether it's for work, school, or personal projects",
-     link: "/",
-     github: "/",
-  },  
-]
+const projectData = projects
 
 
 const uniqueCategories = ['all projects', ...new Set(projectData.map((item) => item.category))]
