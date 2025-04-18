@@ -1,13 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
 
-const Logo = ({bg, hidden}) => {
+const Logo = ({ bg, hidden }) => {
    return (
       <Link href='/'>
          <Image
             src='/logo.png'
-            width={64}
-            height={64}
+            width={44}
+            height={44}
             priority
             className={`dark:py-1 dark:scale-125 dark:rounded-full dark:bg-white/15 ${bg} ${hidden}`}
             alt="Logo"
