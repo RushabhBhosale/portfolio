@@ -1,33 +1,28 @@
-import Link from 'next/link';
-import { Card, CardHeader } from './ui/card';
-import { Github, Link2Icon } from 'lucide-react';
-import { Badge } from './ui/badge';
+import Link from 'next/link'
+import { Github, Link2Icon } from 'lucide-react'
+import { Badge } from './ui/badge'
 
 const ProjectCard = ({ project }) => {
   return (
-    <Card className="group overflow-hidden relative">
-      <CardHeader className="p-0 select-none">
-        <div className={`relative w-full h-[300px] flex items-center justify-center bg-tertiary dark:bg-secondary/40 ${project.image} bg-cover bg-center xl:bg-[110%] xl:bg-no-repeat overflow-hidden`}>
-          <div className='relative'>
-            <Link
-              className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center xl:scale-0 xl:opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-150 absolute -bottom-[8rem] xl:left-[8.5rem] -left-[8.5rem]'
-              href={project.link}>
-              <Link2Icon className='text-white' />
-            </Link>
-            <Link
-              className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center xl:scale-0 xl:opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 absolute -bottom-[8rem] xl:left-[4rem] -left-[4rem]'
-              href={project.github}>
-              <Github className='text-white' />
-            </Link>
-          </div>
+    <div className="relative group rounded-xl overflow-hidden w-full lg:w-72 h-44">
+      <div className={`absolute inset-0 bg-cover bg-center ${project.image} bg-tertiary dark:bg-secondary/40`} />
+
+      <div className="absolute inset-0 bg-black/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 z-10 flex flex-col items-center justify-center text-white px-4 text-center">
+        <div className="text-lg font-bold mb-2">{project.name}</div>
+        <div className="flex gap-4">
+          <Link href={project.link}>
+            <div className="bg-secondary w-10 h-10 rounded-full flex justify-center items-center hover:scale-110 transition">
+              <Link2Icon size={18} />
+            </div>
+          </Link>
+          <Link href={project.github}>
+            <div className="bg-secondary w-10 h-10 rounded-full flex justify-center items-center hover:scale-110 transition">
+              <Github size={18} />
+            </div>
+          </Link>
         </div>
-      </CardHeader>
-      <div className='h-full py-6 px-8'>
-        <Badge className='uppercase text-sm font-medium mb-2 absolute top-4 left-5'>{project.category}</Badge>
-        <h4 className='h4 mb-1'>{project.name}</h4>
-        <p className='text-muted-foreground text-lg'>{project.description}</p>
       </div>
-    </Card>
+    </div>
   )
 }
 

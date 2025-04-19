@@ -6,8 +6,8 @@ const Logo = ({ bg, hidden }) => {
       <Link href='/'>
          <Image
             src='/logo.png'
-            width={44}
-            height={44}
+            width={39}
+            height={36}
             priority
             className={`dark:py-1 dark:scale-125 dark:rounded-full dark:bg-white/15 ${bg} ${hidden}`}
             alt="Logo"
